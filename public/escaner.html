@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#194c3b">
+    <meta name="description" content="GOTTA: gestión de Compra, puntos y reutilización responsable del aceite.">
+    <title>GOTTA | Escáner de documentos | Compras & Premios</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+
+<body>
+    <div class="app">
+        <aside class="sidebar"><a class="brand" href="index.html" style="text-decoration:none;color:inherit">
+                <div class="brand-icon"><img src="assets/logo.png" alt="GOTTA, marca de reutilización de aceite">
+                </div>
+                <!-- <div><strong>Ventas & Premios</strong><small>Panel de gestión</small></div> -->
+            </a>
+            <div>
+                <div class="nav-label">MENÚ PRINCIPAL</div>
+                <nav class="nav"><a href="index.html" data-page="index.html">▦ <span>Dashboard</span></a><a
+                        href="registros.html" data-page="registros.html">▤ <span>Registros</span></a><a
+                        href="nueva-venta.html" data-page="nueva-venta.html">＋ <span>Nueva Compra</span></a><a
+                        href="escaner.html" data-page="escaner.html">▣ <span>Escáner</span></a><a href="premios.html"
+                        data-page="premios.html">♧ <span>Premios y puntos</span></a><a href="reutilizacion.html"
+                        data-page="reutilizacion.html">♻ <span>Reutilización del aceite</span></a></nav>
+            </div>
+            <div class="side-foot">Sistema de gestión<br>Node.js · Express · JSON<br><span id="apiStatus">●
+                    Conectando...</span></div>
+        </aside>
+        <main class="main">
+            <header class="topbar">
+                <div>
+                    <div class="eyebrow">PANEL ADMINISTRATIVO / ESCÁNER</div>
+                    <h1>Escáner de documentos</h1>
+                </div>
+                <div class="user-pill">
+                    <div class="avatar">A</div>
+                    <div><strong>Administrador</strong><small>Panel de control</small></div>
+                </div>
+            </header>
+            <div class="scanner-layout">
+                <div class="panel">
+                    <h2>Subir documento o fotografía</h2>
+                    <div class="dropzone">
+                        <div class="big">📷</div>
+                        <p>Sube una imagen del documento. La vista previa no extrae datos automáticamente; puedes pegar
+                            el texto obtenido con un OCR y revisar la detección aproximada.</p><input id="documentFile"
+                            type="file" accept="image/*"><img id="preview" class="preview" alt="Vista previa">
+                    </div>
+                    <div class="page-links"><button class="secondary" id="startCamera">Abrir cámara</button><button
+                            class="secondary" id="takePhoto" style="display:none">Capturar foto</button><button
+                            class="ghost" id="stopCamera" style="display:none">Cerrar cámara</button></div><video
+                        id="camera" class="camera" autoplay playsinline></video><canvas id="canvas" hidden></canvas>
+                </div>
+                <div class="panel">
+                    <h2>Datos reconocidos</h2>
+                    <div class="field"><label for="scanText">Texto OCR</label><textarea id="scanText" rows="8"
+                            placeholder="Pega aquí el texto obtenido del documento..."></textarea></div>
+                    <div class="page-links"><button class="primary" id="parseText">Detectar campos</button><button
+                            class="secondary" id="goForm">Enviar a nueva Compra</button></div>
+                    <div class="notice" id="scanNotice"></div>
+                    <p class="footer-note">Verifica todos los datos antes de guardarlos. La detección de texto es
+                        aproximada.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="assets/common.js"></script>
+    <script src="assets/escaner.js"></script>
+</body>
+
+</html>

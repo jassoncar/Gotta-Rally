@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#194c3b">
+    <meta name="description" content="GOTTA: gestión de ventas, puntos y reutilización responsable del aceite.">
+    <title>GOTTA | Registrar nueva Compra | Ventas & Premios</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+
+<body>
+    <div class="app">
+        <aside class="sidebar">
+            <a class="brand" href="index.html" style="text-decoration:none;color:inherit">
+                <div class="brand-icon"><img src="assets/logo.png" alt="GOTTA, marca de reutilización de aceite">
+                </div>
+                <!-- <div><strong>Ventas & Premios</strong><small>Panel de gestión</small></div> -->
+            </a>
+            <div>
+                <div class="nav-label">MENÚ PRINCIPAL</div>
+                <nav class="nav"><a href="index.html" data-page="index.html">▦ <span>Dashboard</span></a><a href="registros.html" data-page="registros.html">▤ <span>Registros</span></a><a href="nueva-venta.html" data-page="nueva-venta.html">＋ <span>Nueva Compra</span></a>
+                    <a
+                        href="escaner.html" data-page="escaner.html">▣ <span>Escáner</span></a><a href="premios.html" data-page="premios.html">♧ <span>Premios y puntos</span></a><a href="reutilizacion.html" data-page="reutilizacion.html">♻ <span>Reutilización del aceite</span></a></nav>
+            </div>
+            <div class="side-foot">Sistema de gestión<br>Node.js · Express · JSON<br><span id="apiStatus">●
+                    Conectando...</span></div>
+        </aside>
+        <main class="main">
+            <header class="topbar">
+                <div>
+                    <div class="eyebrow">PANEL ADMINISTRATIVO / NUEVA COMPRA</div>
+                    <h1>Registrar nueva compra</h1>
+                </div>
+                <div class="user-pill">
+                    <div class="avatar">A</div>
+                    <div><strong>Administrador</strong><small>Panel de control</small></div>
+                </div>
+            </header>
+            <div class="panel">
+                <div class="notice" id="formNotice"></div>
+                <form id="saleForm">
+                    <div class="form-grid">
+                        <div class="field"><label for="cedula">Cédula *</label><input id="cedula" name="cedula" required></div>
+                        <div class="field"><label for="nombres">Nombres *</label><input id="nombres" name="nombres" required></div>
+                        <div class="field"><label for="apellidos">Apellidos *</label><input id="apellidos" name="apellidos" required></div>
+                        <div class="field wide"><label for="direccion">Dirección *</label><input id="direccion" name="direccion" required></div>
+                        <div class="field"><label for="nombreSede">Nombre de sede *</label><input id="nombreSede" name="nombreSede" required></div>
+                        <div class="field"><label for="departamento">Departamento *</label><input id="departamento" name="departamento" required></div>
+                        <div class="field"><label for="municipio">Municipio *</label><input id="municipio" name="municipio" required></div>
+                        <div class="field"><label for="fecha">Fecha *</label><input type="date" id="fecha" name="fecha" required></div>
+                        <div class="field"><label for="ventaLt">Venta (litros)</label><input type="number" min="0" step="0.01" id="ventaLt" name="ventaLt" value="0"></div>
+                        <div class="field"><label for="ventaGln">Venta (galones)</label><input type="number" min="0" step="0.01" id="ventaGln" name="ventaGln" value="0"></div>
+                        <div class="field"><label for="costoLt">Costo por litro (C$)</label><input type="number" min="0" step="0.01" id="costoLt" name="costoLt" value="10"></div>
+                        <div class="field"><label for="costoGln">Costo por galón (C$)</label><input type="number" min="0" step="0.01" id="costoGln" name="costoGln" value="37.85"></div>
+                        <div class="field"><label for="mesPreview">Mes automático</label><input id="mesPreview" readonly></div>
+                        <div class="field"><label for="costoPreview">Costo a pagar</label><input id="costoPreview" readonly></div>
+                        <div class="field"><label for="puntosPreview">Puntos estimados</label><input id="puntosPreview" readonly></div>
+                    </div>
+                    <div class="form-actions"><button type="reset" class="ghost" id="resetForm">Limpiar</button><button type="submit" class="primary" id="saveBtn">Guardar Compra</button></div>
+                </form>
+            </div>
+        </main>
+    </div>
+    <script src="assets/common.js"></script>
+    <script src="assets/venta.js"></script>
+</body>
+
+</html>

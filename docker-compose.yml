@@ -1,0 +1,16 @@
+services:
+  ventas-app:
+    build: .
+    container_name: gestion-ventas-recompensas
+    ports:
+      - "3000:3000"
+    environment:
+      PORT: 3000
+      DATA_FILE: /app/data/registros.json
+      POINTS_PER_CORDOBA: 0.1
+    volumes:
+      - ventas_data:/app/data
+    restart: unless-stopped
+
+volumes:
+  ventas_data:

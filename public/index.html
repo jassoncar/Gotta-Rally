@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#194c3b">
+    <meta name="description" content="GOTTA: gestión de ventas, puntos y reutilización responsable del aceite.">
+    <title>GOTTA | GOTTA | Gestión y reutilización de aceite</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+
+<body>
+    <div class="app">
+        <aside class="sidebar">
+            <a class="brand" href="index.html" style="text-decoration:none;color:inherit">
+                <div class="brand-icon"><img src="assets/logo.png" alt="GOTTA, marca de reutilización de aceite">
+                </div>
+                <!-- <div><strong>Ventas & Premios</strong><small>Panel de gestión</small></div> -->
+            </a>
+            <div>
+                <div class="nav-label">MENÚ PRINCIPAL</div>
+                <nav class="nav"><a href="index.html" data-page="index.html">▦ <span>Dashboard</span></a><a href="registros.html" data-page="registros.html">▤ <span>Registros</span></a><a href="nueva-venta.html" data-page="nueva-venta.html">＋ <span>Nueva Compra</span></a>
+                    <a href="escaner.html" data-page="escaner.html">▣ <span>Escáner</span></a><a href="premios.html" data-page="premios.html">♧ <span>Premios y puntos</span></a><a href="reutilizacion.html" data-page="reutilizacion.html">♻ <span>Reutilización del aceite</span></a></nav>
+            </div>
+            <div class="side-foot">Sistema de gestión<br>Node.js · Express · JSON<br><span id="apiStatus">●
+                    Conectando...</span></div>
+        </aside>
+        <main class="main">
+            <header class="topbar">
+                <div>
+                    <div class="eyebrow">PANEL ADMINISTRATIVO / RESUMEN</div>
+                    <h1>Resumen general</h1>
+                </div>
+                <div class="user-pill">
+                    <div class="avatar">A</div>
+                    <div><strong>Administrador</strong><small>Panel de control</small></div>
+                </div>
+            </header>
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-top">Registros de Compra <span class="stat-icon">▤</span></div><strong id="statRegistros">0</strong><small>Total de transacciones</small>
+                </div>
+                <div class="stat">
+                    <div class="stat-top">Total recaudado <span class="stat-icon">💵</span></div><strong id="statRecaudado">C$ 0.00</strong><small>Valor de Compras registradas</small>
+                </div>
+                <div class="stat">
+                    <div class="stat-top">Puntos generados <span class="stat-icon">★</span></div><strong id="statPuntos">0</strong><small>Puntos acumulados</small>
+                </div>
+                <div class="stat">
+                    <div class="stat-top">Litros vendidos <span class="stat-icon">◉</span></div><strong id="statLitros">0</strong><small id="statGalones">0 galones vendidos</small>
+                </div>
+            </div>
+            <div class="section-head">
+                <div>
+                    <h2>Registros recientes</h2>
+                    <p>Últimas Compra guardadas en el sistema</p>
+                </div><a class="primary" style="text-decoration:none;border-radius:10px;padding:10px 14px" href="nueva-venta.html">＋ Nueva Compra</a>
+            </div>
+            <div class="panel">
+                <div class="toolbar">
+                    <div class="field"><label>Buscar</label><input id="dashQ" placeholder="Cédula, nombre o sede...">
+                    </div>
+                    <div class="field"><label>Departamento</label><input id="dashDept" placeholder="Ej. León"></div>
+                    <div class="field"><label>Mes</label><input type="month" id="dashMes"></div>
+                    <div class="field"><label>Nombre</label><input id="dashNombre" placeholder="Nombre del cliente">
+                    </div><button class="secondary" id="clearFilters">Limpiar</button>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Cliente</th>
+                                <th>Cédula</th>
+                                <th>Sede</th>
+                                <th>Fecha</th>
+                                <th>Compra</th>
+                                <th>Costo</th>
+                                <th>Puntos</th>
+                            </tr>
+                        </thead>
+                        <tbody id="recordsBody">
+                            <tr>
+                                <td colspan="7" class="empty">Cargando...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="footer-note" id="tableCount">Mostrando 0 registros</p>
+            </div>
+        </main>
+    </div>
+    <script src="assets/common.js"></script>
+    <script src="assets/dashboard.js"></script>
+</body>
+
+</html>

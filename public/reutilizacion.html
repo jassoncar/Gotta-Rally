@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#194c3b">
+    <meta name="description" content="GOTTA: gestión de ventas, puntos y reutilización responsable del aceite.">
+    <title>GOTTA | Reutilización responsable del aceite | Ventas & Premios</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+
+<body>
+    <div class="app">
+        <aside class="sidebar"><a class="brand" href="index.html" style="text-decoration:none;color:inherit">
+                <div class="brand-icon"><img src="assets/logo.png" alt="GOTTA, marca de reutilización de aceite">
+                </div>
+                <!-- <div><strong>Ventas & Premios</strong><small>Panel de gestión</small></div> -->
+            </a>
+            <div>
+                <div class="nav-label">MENÚ PRINCIPAL</div>
+                <nav class="nav"><a href="index.html" data-page="index.html">▦ <span>Dashboard</span></a><a
+                        href="registros.html" data-page="registros.html">▤ <span>Registros</span></a><a
+                        href="nueva-venta.html" data-page="nueva-venta.html">＋ <span>Nueva Compra</span></a><a
+                        href="escaner.html" data-page="escaner.html">▣ <span>Escáner</span></a><a href="premios.html"
+                        data-page="premios.html">♧ <span>Premios y puntos</span></a><a href="reutilizacion.html"
+                        data-page="reutilizacion.html">♻ <span>Reutilización del aceite</span></a></nav>
+            </div>
+            <div class="side-foot">Sistema de gestión<br>Node.js · Express · JSON<br><span id="apiStatus">●
+                    Conectando...</span></div>
+        </aside>
+        <main class="main">
+            <header class="topbar">
+                <div>
+                    <div class="eyebrow">PANEL ADMINISTRATIVO / EDUCACIÓN AMBIENTAL</div>
+                    <h1>Reutilización responsable del aceite</h1>
+                </div>
+                <div class="user-pill">
+                    <div class="avatar">A</div>
+                    <div><strong>Administrador</strong><small>Panel de control</small></div>
+                </div>
+            </header>
+            <section class="hero-info">
+                <div class="eyebrow" style="color:#b9f0d2">EDUCACIÓN AMBIENTAL</div>
+                <h2>Dar una segunda vida al aceite usado</h2>
+                <p>La recolección y reutilización responsable del aceite puede reducir residuos, promover el
+                    aprovechamiento de recursos y evitar que el aceite termine en desagües, suelos o cuerpos de agua. La
+                    forma de reutilizarlo depende del tipo de aceite y de las normas locales.</p>
+                <div class="page-links"><a href="#pasos" style="color:white">Cómo manejarlo ↓</a><a href="#usos"
+                        style="color:white">Usos posibles ↓</a></div>
+            </section>
+            <div class="info-grid">
+                <article class="info-card">
+                    <h3>🌎 Beneficio ambiental</h3>
+                    <p>Evitar vertidos de aceite ayuda a disminuir la contaminación del agua y del suelo, además de
+                        reducir obstrucciones en tuberías.</p>
+                </article>
+                <article class="info-card">
+                    <h3>♻️ Aprovechamiento</h3>
+                    <p>El aceite recolectado puede tener usos industriales o convertirse en materia prima para otros
+                        productos mediante procesos adecuados.</p>
+                </article>
+                <article class="info-card">
+                    <h3>🤝 Recolección responsable</h3>
+                    <p>Separar, almacenar y entregar el aceite a un gestor o centro de acopio autorizado favorece su
+                        aprovechamiento seguro.</p>
+                </article>
+            </div>
+            <div class="section-head" id="pasos">
+                <div>
+                    <h2>¿Cómo manejar el aceite usado?</h2>
+                    <p>Buenas prácticas para su almacenamiento y entrega.</p>
+                </div>
+            </div>
+            <div class="panel">
+                <ol class="tips">
+                    <li>Deja que el aceite se enfríe antes de manipularlo.</li>
+                    <li>Guárdalo en un recipiente limpio, resistente, cerrado y claramente identificado.</li>
+                    <li>No lo mezcles con agua, solventes, combustibles ni otros residuos.</li>
+                    <li>No lo viertas en fregaderos, inodoros, alcantarillas, suelo o cuerpos de agua.</li>
+                    <li>Entrégalo a un centro de acopio o gestor que pueda indicar el tratamiento correcto.</li>
+                    <li>Usa guantes y sigue las medidas de seguridad establecidas para la manipulación.</li>
+                </ol>
+            </div>
+            <div class="section-head" id="usos">
+                <div>
+                    <h2>¿En qué puede aprovecharse?</h2>
+                    <p>Los procesos varían según si se trata de aceite de cocina, lubricante u otro tipo de aceite.</p>
+                </div>
+            </div>
+            <div class="info-grid">
+                <article class="info-card">
+                    <h3>Aceite de cocina usado</h3>
+                    <p>Cuando se recolecta adecuadamente, puede procesarse para producir biodiésel, jabones u otros
+                        productos, según las capacidades y requisitos del gestor.</p>
+                </article>
+                <article class="info-card">
+                    <h3>Aceites lubricantes usados</h3>
+                    <p>Requieren manejo especializado. Pueden enviarse a regeneración o tratamiento mediante
+                        instalaciones autorizadas; no deben mezclarse con aceite de cocina.</p>
+                </article>
+                <article class="info-card">
+                    <h3>Importante</h3>
+                    <p>No reutilices aceite de cocina para consumo si está degradado, huele mal, está muy oscuro o
+                        produce humo excesivo. No uses aceite usado para fabricar productos sin conocer los riesgos y el
+                        proceso correcto.</p>
+                </article>
+            </div>
+            <p class="footer-note">Esta página ofrece orientación general. Sigue las regulaciones ambientales y de
+                seguridad de tu localidad y las instrucciones del centro de acopio receptor.</p>
+        </main>
+    </div>
+    <script src="assets/common.js"></script>
+</body>
+
+</html>

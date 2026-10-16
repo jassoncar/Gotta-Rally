@@ -1,0 +1,9 @@
+{
+  "name": "gestion-ventas-recompensas",
+  "version": "1.0.0",
+  "description": "Dashboard de ventas, registros y recompensas con Node.js y Express",
+  "main": "server.js",
+  "scripts": { "start": "node server.js", "dev": "node --watch server.js" },
+  "dependencies": { "express": "^4.21.2" },
+  "engines": { "node": ">=20" }
+}

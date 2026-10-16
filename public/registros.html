@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#194c3b">
+    <meta name="description" content="GOTTA: gestión de ventas, puntos y reutilización responsable del aceite.">
+    <title>GOTTA | Historial de ventas | Ventas & Premios</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+
+<body>
+    <div class="app">
+        <aside class="sidebar"><a class="brand" href="index.html" style="text-decoration:none;color:inherit">
+                <div class="brand-icon"><img src="assets/logo.png" alt="GOTTA, marca de reutilización de aceite">
+                </div>
+                <!-- <div><strong>Ventas & Premios</strong><small>Panel de gestión</small></div> -->
+            </a>
+            <div>
+                <div class="nav-label">MENÚ PRINCIPAL</div>
+                <nav class="nav"><a href="index.html" data-page="index.html">▦ <span>Dashboard</span></a><a
+                        href="registros.html" data-page="registros.html">▤ <span>Registros</span></a><a
+                        href="nueva-venta.html" data-page="nueva-venta.html">＋ <span>Nueva Compra</span></a><a
+                        href="escaner.html" data-page="escaner.html">▣ <span>Escáner</span></a><a href="premios.html"
+                        data-page="premios.html">♧ <span>Premios y puntos</span></a><a href="reutilizacion.html"
+                        data-page="reutilizacion.html">♻ <span>Reutilización del aceite</span></a></nav>
+            </div>
+            <div class="side-foot">Sistema de gestión<br>Node.js · Express · JSON<br><span id="apiStatus">●
+                    Conectando...</span></div>
+        </aside>
+        <main class="main">
+            <header class="topbar">
+                <div>
+                    <div class="eyebrow">PANEL ADMINISTRATIVO / REGISTROS</div>
+                    <h1>Historial de ventas</h1>
+                </div>
+                <div class="user-pill">
+                    <div class="avatar">A</div>
+                    <div><strong>Administrador</strong><small>Panel de control</small></div>
+                </div>
+            </header>
+            <div class="panel">
+                <div class="toolbar">
+                    <div class="field"><label>Buscar</label><input id="allQ" placeholder="Cédula, nombre o sede...">
+                    </div>
+                    <div class="field"><label>Departamento</label><input id="allDept" placeholder="Ej. León"></div>
+                    <div class="field"><label>Mes</label><input type="month" id="allMes"></div>
+                    <div class="field"><label>Nombre</label><input id="allNombre" placeholder="Nombre del cliente">
+                    </div><button class="secondary" id="allClear">Limpiar</button>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Cliente</th>
+                                <th>Cédula</th>
+                                <th>Dirección</th>
+                                <th>Sede</th>
+                                <th>Departamento</th>
+                                <th>Municipio</th>
+                                <th>Fecha</th>
+                                <th>Litros</th>
+                                <th>Galones</th>
+                                <th>Costo</th>
+                                <th>Puntos</th>
+                            </tr>
+                        </thead>
+                        <tbody id="allRecordsBody">
+                            <tr>
+                                <td colspan="11" class="empty">Cargando...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="footer-note" id="allTableCount">Mostrando 0 registros</p>
+            </div>
+        </main>
+    </div>
+    <script src="assets/common.js"></script>
+    <script src="assets/registros.js"></script>
+</body>
+
+</html>
